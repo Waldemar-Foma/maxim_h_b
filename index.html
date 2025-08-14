@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday | Tech Celebration</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="more/load.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="more/load.png" alt="Loading" class="spinner">
+            <div class="jokes-container">
+                <div class="joke active">Изя, откуда у тебя такие красивые часы? Мне их отец перед смертью продал</div>
+                <div class="joke">Почему Гитлер застрелился? Ему пришел счёт за газ</div>
+                <div class="joke">На соревнованиях по плаванию электрик замкнул тройку лидеров)</div>
+                <div class="joke">Был поселок, его купил городской тип, теперь это поселок городского типа.</div>
+                <div class="joke">Люди, которые читают газеты, сидя на унитазе, готовы к любым новостям.</div>
+                <div class="joke">Горит крыша - 01, нужна крыша - 02, едет крыша - 03.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 300px; height: 300px; background: rgba(255, 107, 53, 0.1); top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 400px; height: 400px; background: rgba(0, 206, 154, 0.1); top: 60%; left: 70%; animation-delay: 3s;"></div>
+        <div class="floating-element" style="width: 250px; height: 250px; background: rgba(0, 78, 137, 0.1); top: 30%; left: 80%; animation-delay: 6s;"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Tech Navigation -->
+        <nav class="tech-nav">
+            <div class="nav-item active" data-tab="home">Главная</div>
+            <div class="nav-item" data-tab="gallery">Галерея</div>
+            <div class="nav-item" data-tab="surprise">Сюрприз</div>
+        </nav>
+        
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <section class="hero">
+                <h1>С Днём Рождения!</h1>
+                <p>Сегодня особенный день — день, когда мир стал лучше на одного замечательного человека. Пусть этот год принесёт тебе новые достижения, яркие впечатления и моменты настоящего счастья.</p>
+                <p>Желаю, чтобы каждый день был наполнен вдохновением, чтобы мечты становились реальностью, а рядом всегда были люди, которые ценят и поддерживают тебя.</p>
+                <div class="glitch neon" style="margin-top: 2rem;">Happy Birthday!</div>
+            </section>
+        </div>
+        
+        <!-- Gallery Tab -->
+        <div id="gallery" class="tab-content">
+            <h2 class="neon" style="text-align: center; margin-bottom: 2rem;">Воспоминания</h2>
+            <div class="gallery" id="gallery-grid">
+                <!-- Gallery items will be added by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Surprise Tab -->
+        <div id="surprise" class="tab-content">
+            <div class="surprise-container">
+                <div class="disclaimer">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Внимание, приготовьтесь!</h2>
+                    <p>Ты действительно готов увидеть нечто особенное? То, что запомнится надолго? Нажми на кнопку, если уверен в своих силах!</p>
+                    <button class="cta-button" id="play-surprise">
+                        <i class="fas fa-play"></i> Показать Сюрприз
+                    </button>
+                </div>
+                <div class="video-container" id="video-container">
+                    <video id="surprise-video" controls>
+                        <source src="more/video/surprise.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Photo Modal -->
+    <div class="modal" id="photo-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-image-container">
+                <img src="" alt="" id="modal-image">
+            </div>
+            <div class="modal-nav">
+                <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
